@@ -1,23 +1,7 @@
 ---
 
-- name: Install packages to install android sdk
-  yum: name={{ item }} state=installed
-  with_items:
-    - glibc.i686
-    - libstdc++.i686
-    - glibc-devel.i686
-    - zlib.i686
-    - zlib-devel.i686
-    - ncurses-devel.i686
-    - libX11-devel.i686
-    - libXrender.i686
-    - ld-linux.so.2
 
-- name: Install Java
-  yum: name={{ item }} state=installed
-  with_items:
-    - java-1.7.0-openjdk
-    - java-1.7.0-openjdk-devel
+
 
 - name: Download sdk tools
   get_url: >
